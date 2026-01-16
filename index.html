@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI that actually solves your problems. I help commercial teams use AI to fix what's not working. Through training, building, or both.">
+  <title>Jake Hewlett | AI Consultancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #0f172a;
+      --color-background: #ffffff;
+      --color-accent: #475569;
+      --color-text: #334155;
+      --color-text-light: #64748b;
+      --color-border: #e2e8f0;
+      --color-surface: #f8fafc;
+      --max-width: 860px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 17px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--color-background);
+      color: var(--color-text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: -0.01em;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Header */
+    header {
+      padding: 1.5rem 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 6rem 0 5rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.5rem;
+      max-width: 700px;
+    }
+
+    .hero .subhead {
+      font-size: 1.35rem;
+      color: var(--color-text);
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--color-primary);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: -0.01em;
+      transition: background-color 0.15s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #1e293b;
+    }
+
+    /* Sections */
+    section {
+      padding: 5rem 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    section h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 2rem;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+      max-width: 640px;
+    }
+
+    section p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* Two-column layout for Build/Train */
+    .offerings {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .offering {
+      padding: 2rem;
+      background: var(--color-surface);
+      border-radius: 6px;
+    }
+
+    .offering h3 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .offering p {
+      font-size: 1rem;
+      color: var(--color-text);
+      margin-bottom: 0;
+    }
+
+    .offering-note {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .offering-note p {
+      font-size: 1.05rem;
+      color: var(--color-text);
+      font-style: italic;
+    }
+
+    /* Lists */
+    .audience-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .audience-list li {
+      font-size: 1.1rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+
+    .audience-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* Process */
+    .process-steps {
+      margin-top: 2rem;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .process-step {
+      display: flex;
+      gap: 1.25rem;
+      align-items: baseline;
+    }
+
+    .step-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-border);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .step-content h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    .step-content p {
+      font-size: 1rem;
+      color: var(--color-text);
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+    footer {
+      padding: 4rem 0 3rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .footer-content {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-content a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .footer-content a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile */
+    @media (max-width: 720px) {
+      html {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 0 1.5rem;
+      }
+
+      .hero {
+        padding: 4rem 0 3rem;
+      }
+
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+
+      .hero .subhead {
+        font-size: 1.15rem;
+      }
+
+      section {
+        padding: 3rem 0;
+      }
+
+      .offerings {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .offering {
+        padding: 1.5rem;
+      }
+
+      .cta-button {
+        display: block;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="/" class="site-name">Jake Hewlett</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>AI that actually solves your problems</h1>
+        <p class="subhead">I help commercial teams use AI to fix what's not working. Through training, building, or both.</p>
+        <!-- Replace # with your Calendly link or mailto: -->
+        <a href="#" class="cta-button">Let's talk</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>The Problem</h2>
+        <p>AI sounds great in theory. But when it comes to actually using it, most teams get stuck at the same point: where do we even start?</p>
+        <p>The opportunity is too broad. The tools are too general. And the gap between "AI could help with that" and actually solving the problem feels massive.</p>
+        <p>The real questions are specific: What's taking too long? What's not working? What does your team keep failing to hit? What tools do you already use that don't give you what you need?</p>
+        <p>These questions exist in every business. AI genuinely can help answer them. But only if someone connects the technology to the actual problem.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>What I Do</h2>
+        <p>I work with commercial teams in two ways:</p>
+
+        <div class="offerings">
+          <div class="offering">
+            <h3>Build</h3>
+            <p>Got a specific business problem? I use AI-powered development tools to build real solutions. Apps, automations, workflows. Without the overhead of a traditional dev team. Fast, practical, built to your spec.</p>
+          </div>
+          <div class="offering">
+            <h3>Train</h3>
+            <p>Want your team to do this themselves? I run hands-on training that takes people from "I've heard of ChatGPT" to genuinely capable. Prompting, prototyping, automating, creating.</p>
+          </div>
+        </div>
+
+        <div class="offering-note">
+          <p>Often it's both: I'll build something with you, then make sure your team can run and extend it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Why Me</h2>
+        <p>I'm not an engineer or a designer. I'm a commercial leader who's spent 15 years in analytics and tech businesses. Including time at Google and running startup businesses.</p>
+        <p>Last year I built an AI-powered coaching platform from scratch: the product, the app, the brand, the content. I used AI tools to do work that would've previously required a dev team, a designer, and a copywriter.</p>
+        <p>That means I understand the business problems you're trying to solve. And I know how to use AI to actually solve them. No middleman. No translation layer.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Who This Is For</h2>
+        <ul class="audience-list">
+          <li>Leaders with business problems who want solutions, not slide decks</li>
+          <li>Teams who want to get genuinely capable with AI</li>
+          <li>Businesses moving fast without big tech departments</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+              <h3>Discovery call</h3>
+              <p>Understand the problem or opportunity</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+              <h3>Scope it</h3>
+              <p>Build, train, or a combination</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+              <h3>Deliver</h3>
+              <p>Working solutions, capable teams, or both</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <!-- Replace # with your email or Calendly link -->
+      <a href="#">Get in touch</a>
+      <a href="https://linkedin.com/in/jakehewlett" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>
